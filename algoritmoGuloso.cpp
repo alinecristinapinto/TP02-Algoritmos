@@ -26,8 +26,11 @@ int AlgoritmoGuloso::calcularNumeroMatch(Grafo& grafo){
 
         int indiceUsuario = ofertasUsuario.second;
         for(Aresta aresta : grafo.getListaAdj()[indiceUsuario]){
+            // Na modelagem do grafo, as ofertas comecam a partir de numeroUsuarios + 1
+            // para associar com os indices de um vetor iniciando de 0 faco essa subtracao
             int idOferta = aresta.destino - this->numUsuarios - 1;
 
+            // Pega a primeira oferta nao ocupada
             if(!ofertasOcupadas[idOferta]){
                 ofertasOcupadas[idOferta] = 1;
                 numMatches ++;
