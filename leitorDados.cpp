@@ -10,8 +10,8 @@ Leitor::Leitor(){}
 void Leitor::ler(Grafo& grafo, int &numUsuarios, int &numOfertas){
     int numQualificacoes;
     cin >> numUsuarios >> numOfertas >> numQualificacoes;
-    grafo = Grafo(numQualificacoes);
 
+    grafo = Grafo(numUsuarios);
     std::map<string, int> mapVerticesParaNum; // map auxiliar para transformar string em numero
     int idUsuario = 0;  // será incrementado para usuarios = 1 ... numero de usuarios
     int idOferta = numUsuarios;  // será incrementado para ofertas = numero de usuarios + 1 ... numero de ofertas

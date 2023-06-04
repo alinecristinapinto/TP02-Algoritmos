@@ -6,7 +6,7 @@ using namespace std;
 Grafo::Grafo(){}
 
 Grafo::Grafo(int numeroVertices){
-    this->numeroVertices = numeroVertices;
+    this->numeroVertices = numeroVertices + 1;
     this->listaAdj = new std::vector<Aresta>[numeroVertices + 2];
 }
 

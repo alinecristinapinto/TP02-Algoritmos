@@ -2,6 +2,10 @@
 #include "grafo.hpp"
 #include "leitorDados.hpp"
 #include "algoritmoExato.hpp"
+#include "algoritmoGuloso.hpp"
+
+#include <algorithm>
+#include <vector>
 
 #define INF 0x3f3f3f3f
 
@@ -15,9 +19,11 @@ int main(int argc, char const *argv[]) {
 
     leitor.ler(grafo, numUsuarios, numOfertas);
 
-    AlgoritmoExato exato = AlgoritmoExato(numUsuarios, numOfertas);
+    AlgoritmoGuloso guloso = AlgoritmoGuloso(numUsuarios, numOfertas);
+    cout << "Guloso: " << guloso.calcularNumeroMatch(grafo) << endl;
 
-    cout << exato.calcularNumeroMaximoMatch(grafo) << endl;
+    AlgoritmoExato exato = AlgoritmoExato(numUsuarios, numOfertas);
+    cout << "Exato: " << exato.calcularNumeroMaximoMatch(grafo) << endl;
 
     return 0;
 }

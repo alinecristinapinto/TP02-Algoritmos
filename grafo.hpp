@@ -2,6 +2,7 @@
 #define GRAFO_HPP
 
 #include <vector>
+#include <queue>
 
 // Representa uma aresta do grafo
 typedef struct Aresta {
@@ -22,7 +23,7 @@ public:
     std::vector<Aresta>* getListaAdj();
 
     bool arestaPertencente(int fonte, int destino);
-
+    
     // DEBUG
     void imprimir(); 
 
