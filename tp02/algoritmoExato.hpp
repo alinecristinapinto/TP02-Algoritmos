@@ -3,8 +3,6 @@
 
 #include "grafo.hpp"
 
-// Classe que implementa o algoritmo de match de grafo bipartido
-// Baseado em: https://www.geeksforgeeks.org/maximum-bipartite-matching/ 
 class AlgoritmoExato {
 public:
     AlgoritmoExato(int numUsuarios, int numOfertas);
